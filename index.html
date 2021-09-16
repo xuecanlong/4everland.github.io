@@ -1,481 +1,239 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="zh-CN" id="bgimg">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width" />
-<meta name="baidu_union_verify" content="4everland.github.io">
-<title>4everland.github.io</title>
-<meta name="description" content="4everland.github.io">
-<meta name="keywords" content="4everland.github.io">
-<link rel="icon" href="" mce_href="/dir/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="https://www.bootcss.com/p/buttons/css/buttons.css">
-<link rel="stylesheet" type="text/css" href="https://www.bootcss.com/p/buttons/css/showcase.css">
-
-<meta name="referrer" content="no-referrer" />
-<script type="text/javascript">
-
-var omitformtags=["input", "textarea", "select"]
-
-omitformtags=omitformtags.join("|")
-
-function disableselect(e){ 
-if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1) 
-return false 
-}
-
-function reEnable(){ 
-return true 
-}
-
-if (typeof document.onselectstart!="undefined") 
-document.onselectstart=new Function ("return false") 
-else{ 
-document.onmousedown=disableselect 
-document.onmouseup=reEnable 
-} 
-</script>
-
-<script> 
-function stop(){ 
-return false; 
-} 
-document.oncontextmenu=stop; 
-
-	function click(e) {
-		if (document.layers) {
-			if (e.which == 3) {
-				oncontextmenu='return false';
-			}
-		}
-	}
-	if (document.layers) {
-		document.captureEvents(Event.MOUSEDOWN);
-	}
-	document.onmousedown=click;
-	document.oncontextmenu = new Function("return false;")
-	document.onkeydown =document.onkeyup = document.onkeypress=function(){ 
-		if(window.event.keyCode == 123) { 
-			window.event.returnValue=false;
-			return(false); 
-		} 
-	}
-</script>
-
-<script type="text/javascript">
-	function change(){
-		var bodyBgs = [];
-		bodyBgs[0] = "http://img.netbian.com/file/2019/0808/ea41cb48c796ffd3020514994fc3e839.jpg";
-		bodyBgs[1] = "http://img.netbian.com/file/2019/0808/ea41cb48c796ffd3020514994fc3e839.jpg";
-		bodyBgs[2] = "http://img.netbian.com/file/2019/0808/ea41cb48c796ffd3020514994fc3e839.jpg";
-		bodyBgs[3] = "http://img.netbian.com/file/2019/0808/2bedaa2e638faded4fbec176aea8c223.jpg";
-		bodyBgs[4] = "http://img.netbian.com/file/2019/0808/2bedaa2e638faded4fbec176aea8c223.jpg";
-		bodyBgs[5] = "http://img.netbian.com/file/2019/0808/2bedaa2e638faded4fbec176aea8c223.jpg";
-		bodyBgs[6] = "http://img.netbian.com/file/2019/0125/01a2990f9e6125fa93b01441aab2cc2e.jpg";
-		bodyBgs[7] = "http://img.netbian.com/file/2019/0125/01a2990f9e6125fa93b01441aab2cc2e.jpg";
-		bodyBgs[8] = "http://img.netbian.com/file/2018/1214/3fd293c8825cab753516ae3f8b6b6660.jpg";
-		bodyBgs[9] = "http://img.netbian.com/file/2018/1214/3fd293c8825cab753516ae3f8b6b6660.jpg";
-		bodyBgs[10] = "http://img.netbian.com/file/2018/1214/3fd293c8825cab753516ae3f8b6b6660.jpg";
-//注意 bodyBgs[50] 50是当前序号, 按照顺序添加或删除即可, 但是序号必须是连续的
-
-		//bodyBgs[] = "";
-
-		var randomBgIndex = Math.round( Math.random() * 10 );//这里的10是随机取值范围, 取最后一个 bodyBgs[*] 的值即可
-		//document.write('<style>html{background-image:url(' + bodyBgs[randomBgIndex] + ')}</style>');
-		var img1= document.getElementById('bgimg');
-		img1.style.backgroundImage='url(' + bodyBgs[randomBgIndex] + ')';
-	        window.setTimeout(function(){change()},10000);//图片切换时间 1000=1s
-	}
-	change();
-</script>
-<style>
-/* basic styles for black background and crosshair cursor */
-* {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box
-}
-
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-	display: block
-}
-
-blockquote,q {
-	quotes: none
-}
-
-blockquote:before,blockquote:after,q:before,q:after {
-	content: '';
-	content: none
-}
-
-input,textarea {
-	margin: 0;
-	padding: 0
-}
-
-ol,ul {
-	list-style: none
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0
-}
-
-caption,th {
-	text-align: left
-}
-
-a:focus {
-	outline: 0
-}
-
-html {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	font-family: Microsoft YaHei,sans-serif;
-	z-index: 1;
-	line-height: 1.5;
-	background-color: #121925;
-	font-weight: 300;
-	background-size: cover;
-	background-position: 50% 50%;
-	background-attachment: fixed;
-	-webkit-transition: .5s linear;
-	-moz-transition: .5s linear;
-	-o-transition: .5s linear;
-	transition: .5s linear;
-	/*overflow:hidden*/
-}
-
-body{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	min-width: 300px;
-	z-index: 2;
-	cursor:url('./style/default.cur'), url(./style/default.cur), auto;
-}
-body:before {
-  content: ' ';
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url(./style/mask.png) center 0 repeat;
-}
-a {
-	color: #858585;
-	text-decoration:none;
-	cursor: url('./style/hand.cur'), url(./style/hand.cur), auto;
-}
-
-a:hover {
-	color: #00b3ba
-}
-
-b {
-	background-color: rgba(0,179,186,0.4)
-}
-
-::selection {
-	background: #00b3ba
-}
-
-::-moz-selection {
-	background: #00b3ba
-}
-
-.top_hr_style01 {
-	width: 70%;
-	margin: 5px auto;
-	border: 0;
-	border-bottom: 1px solid #fff
-}
-
-.top_hr_style02 {
-	border: 0;
-	border-bottom: 1px dashed #858585
-}
-
-.slider {
-	width: 100%;
-	height: 150px;
-	-webkit-transition: .2s ease;
-	-moz-transition: .2s ease;
-	-o-transition: .2s ease;
-	transition: .2s ease;
-	background-image: url(./img/topBG.jpg);
-	background-color: #121925;
-	background-size: cover;
-	background-position: 50% 50%;
-	background-attachment: fixed
-}
-
-#top {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	margin: auto;
-	z-index: 11
-}
-
-#top_img {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	background-image: url(./img/topBG.jpg);
-	background-color: #121925;
-	background-size: cover;
-	background-position: 50% 50%;
-	background-attachment: fixed;
-	z-index: 11
-}
-
-#top_main {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	margin: 0 auto;
-	padding: 40px 0 10px 0
-}
-
-#top_logo {
-	height: 30%;
-	min-height: 50px;
-	max-height: 244px;
-	display: block
-}
-
-#top_logo img {
-	-webkit-animation: A 15s linear 0s infinite;
-	animation: A 15s linear 0s infinite;
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-	height: 100%
-}
-
-@-webkit-keyframes A {
-	0% {
-		-webkit-transform: rotate(0deg)
-	}
-
-	100% {
-		-webkit-transform: rotate(360deg)
-	}
-}
-
-@keyframes A {
-	0% {
-		transform: rotate(0deg)
-	}
-
-	100% {
-		transform: rotate(360deg)
-	}
-}
-
-#top_title {
-	text-align: center;
-	padding-top: 15px;
-	display: block;
-	height: 10%
-}
-
-#top_title img {
-	margin-right: auto;
-	margin-left: auto;
-	display: block
-}
-
-#top_title #top_title01 {
-	height: 83%;
-	max-height: 59px;
-	min-height: 30px
-}
-
-#top_title #top_title02 {
-	height: 9px
-}
-#top_title #top_title02:hover{
-	background:rgba(0,0,0,0.8);
-}
-#top_navlist {
-	display: block;
-	width: 30%;
-	height: 220px;
-	max-width: 220px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 50px
-}
-
-#top_navlist::after {
-	content: " ";
-	display: block;
-	width: 20%;
-	height: 150px
-}
-
-.top_nav {
-	background-image:url(./style/nav_bg.png);
-	border-radius: 5px;
-	display: block;
-	width: 100%;
-	max-height: 40px;
-	min-height: 10px;
-	margin-top: 15px;
-	text-decoration: none;
-	font-size: 90%;
-	vertical-align: middle central;
-	color: #fff;
-	letter-spacing: .5px;
-	text-align: center;
-	-webkit-transition: .2s linear;
-	-moz-transition: .2s linear;
-	-o-transition: .2s linear;
-	transition: .2s linear;
-	line-height: 180%
-}
-
-.top_nav:hover {
-	border-radius: 5px;
-	background: #fff
-}
-
-#top_footer {
-	padding: 4px 10px 4px 10px;
-	background-color: #000;
-	background-color: rgba(0,0,0,0.9);
-	color: #858585;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 12;
-	-webkit-transition: .2s linear;
-	-moz-transition: .2s linear;
-	-o-transition: .2s linear;
-	transition: .2s linear
-}
-#top_footer:hover{
-	background-color: #FFF;
-	background-color: rgba(255,255,255,0.8);
-	color: #000;
-}
-#top_copyright {
-	display: block;
-	-webkit-transition: .2s linear;
-	-moz-transition: .2s linear;
-	-o-transition: .2s linear;
-	transition: .2s linear;
-	font-size: 10px;
-	letter-spacing: 1.5px;
-	text-align: center
-}
-
-@media screen and (max-width:500px) {
-	#top_footer {
-		padding: 1px
-	}
-
-	#top_copyright {
-		font-size: 8px;
-		letter-spacing: 0;
-		text-align: center
-	}
-}
-.tooltips{
--webkit-animation: A 3s linear 0s infinite;
-animation: A 3s linear 0s infinite;
-width:12px;
-height:12px;
-top:10px;
-left:10px;
-background: url(./style/snow0.gif);
-font-size: 10px;
-position:absolute; /*这个是关键*/
-z-index:102;
-}
-.tooltips:hover{
--webkit-animation: none;
-animation: none;
-z-index:103;
-background:none; /*没有这个在IE中不可用*/
-}
-.tooltips span{
-display: none;
-}
-.tooltips:hover span{ /*span 标签仅在 :hover 状态时显示*/
-display:block;
-position:relative;
-}
-</style>
-<div style="text-align:center;clear:both">
+<div style="background:#fff;padding:30px" class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-24 ant-col-lg-16 ant-col-xl-12 ant-col-xxl-10">
+	<h3 class="article-title">
+		4EVERLAND部署+域名验证
+	</h3>
+	
+	<div id="article-html">
+		<p>
+			官网：https://hosting.4everland.org/
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			<img src="./img/a1d15a8d269b45c09c8c82fb24b6e514_GEZDKNBKG42DC.png">
+			<br>
+		</p>
+		<p>
+			官方推特：https://twitter.com/4everland_org
+		</p>
+		<p>
+			<img src="./img/92c7d39aecee4846a118cd336db581ca_GYZDOKRXG4YQ.png">
+			<br>
+		</p>
+		<p>
+			奖励：
+		</p>
+		<p>
+			<img src="./img/66d77d5ccac34800964994eeffa66fda_G43DKKRVGU4Q.png">
+			<br>
+		</p>
+		<p>
+			因为是带邀请奖励的，部署成功的可以去评论区留言你的邀请奖励
+		</p>
+		<p>
+			<img src="./img/1299a35539fb48e997f2749152096871_GEZTCOBKG43DK.png">
+			<br>
+		</p>
+		<p>
+			如何快速部署呢？
+		</p>
+		<p>
+			1.打开官网：https://hosting.4everland.org/
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			不介意的话&nbsp; 用我的邀请地址：https://hosting.4everland.org/#/?invite=TG17KCR4
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			<img src="./img/cfe22f70444d4f15acabc348e89093d2_GEYTEMBKGYYTE.png">
+			<br>
+		</p>
+		<p>
+			选择git登录
+		</p>
+		<p>
+			<img src="./img/bf93d779bd9c42ddb033aca2badce87a_GEZDSNJKGU4DA.png">
+			<br>
+		</p>
+		<p>
+			<img src="./img/99c87a58deb24a2ab8b3116d9605ba30_G43TSKRUGA2Q.png">
+			<br>
+		</p>
+		<p>
+			如果你的git上没有项目怎么办？
+		</p>
+		<p>
+			如果有项目的话直接点击部署即可
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			直接复制一个就好，打开：https://github.com/xuecanlong/4everland.github.io
+		</p>
+		<p>
+			<img src="./img/fork.png">
+			<br>
+		</p>
+		<p>
+			点开叉子，就复制到你的储存库了
+		</p>
+		<p>
+			刷新下主页面
+		</p>
+		<p>
+			<img src="./img/d69e5dcfc6d549f7ab7ed13c1b8c4d46_GYYTAKRVHEZA.png">
+			<br>
+		</p>
+		<p>
+			选择刚才复制的储存库
+		</p>
+		<p>
+			<img src="./img/ac851b15f06a4bf4ae3dd1b5e96dbaed_GY2TQKRTGMYA.png">
+			<br>
+		</p>
+		<p>
+			一直部署
+			<br>
+		</p>
+		<p>
+			（如果出现部署不成功就返回界面多复制几个项目在部署）
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			部署成功后，领奖励
+		</p>
+		<p>
+			<img src="./img/ce7c170ebde244849d1035fc3f9651e2_GEYTGOJKGQ3TA.png">
+			<br>
+		</p>
+		<p>
+			<img src="./img/d016367a6c27449ab86adb245ca65ca1_GEYDGNZKGQ4TQ.png">
+			<br>
+		</p>
+		<p>
+			点开钱包地址，绑定你的钱包
+		</p>
+		<p>
+			<img src="./img/73544b7ecf434ff2b60c2f0e3379d29c_GEYDINJKGQZDE.png">
+			<br>
+		</p>
+		<p>
+			出现这个claim就完成了
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			我们在去验证下域名
+		</p>
+		<p>
+			1.准备好域名（腾讯云、阿里云都可以）先去购买域名
+		</p>
+		<p>
+			腾讯云网址：https://cloud.tencent.com/
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			打开：https://hosting.4everland.org/#/dashboard/domains
+		</p>
+		<p>
+			<img src="./img/b6f9dce2b4a64297b20340bc47b571ee_GEYTCNBKGU2TM.png">
+			<br>
+		</p>
+		<p>
+			<img src="./img/191caa2cf84d496194550dbe3886c20e_GY3DSKRUGYZA.png">
+			<br>
+		</p>
+		<p>
+			<img src="./img/0f0422bdcd8e40c2a3ae99de611cd424_GYYTKKRTGIZA.png">
+			<br>
+		</p>
+		<p>
+			会自动跳转到域名设置
+		</p>
+		<p>
+			<img src="./img/358049b869194c17834ed16356f26621_GEYDSOJKG4ZTK.png">
+			<br>
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			然后打开腾讯云/阿里云&nbsp; 域名解析
+		</p>
+		<p>
+			<img src="./img/e1907bcdba77401bb17e282656b168a4_GEYTSMRKGUZDK.png">
+			<br>
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			添加记录
+		</p>
+		<p>
+			<img src="./img/98abdc9d8ab54fb9b4b6272a34886173_GEYTMNZKGE4DG.png">
+			<br>
+		</p>
+		<p>
+			按图设置
+		</p>
+		<p>
+			<img src="./img/38dd2ead0a61400f8b7fb2e2f3fa7228_GEYTSNZKGE4TE.png">
+			<br>
+		</p>
+		<p>
+			在增加一个
+		</p>
+		<p>
+			<img src="./img/e989a6476cf241d08c00ba750d675335_GEZDGMZKGM2DG.png">
+			<br>
+		</p>
+		<p>
+			填加完成后
+		</p>
+		<p>
+			回到4EVERLAND看到已经验证完成了
+		</p>
+		<p>
+			<img src="./img/0884097e1f00404e9364384d215c21c5_GEYDMNBKGY3TM.png">
+			<br>
+		</p>
+		<p>
+			在看你的页面
+		</p>
+		<p>
+			<img src="./img/be8b17d930ef48dea918d956c94ee0d3_GEYDIMBKGQ4DI.png">
+			<br>
+		</p>
+		<p>
+			<br>
+		</p>
+		<p>
+			<img src="./img/ffd8157547894ca18f16c21842c480e3_GY4DQKRRGYZA.png">
+			<br>
+		</p>
+		<p>
+			冲爆了
+		</p>
 </div>
-<div class="tooltips">
-<span>
-
-
-<iframe src="http://music.163.com/outchain/player?type=2&amp;id=1391638771&amp;auto=1&amp;height=280" width=330 height="300" frameborder="no" marginwidth="0" marginheight="0"></iframe>
-</span>
-</div>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?fdf2184efaf851b3205918e981935a44";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-</head>
-<body>
-<div id="top">
-<main id="top_main">
-<div id="top_logo"><img src="./htmlimg/tx.png" onmouseover="mouseOver()" onmouseout="mouseOut()" id="mainimg"></div>
-<div id="top_title"><img id="top_title01" alt=""" src="./htmlimg/toptitle01.png">
-<br class="top_hr_style01">
-<img id="top_title02" alt=""" src="./htmlimg/toptitle02.png">
-</div><br><br>s
-
-
-</main>
-<script>
-	function mouseOver(){
-		document.getElementById("mainimg").src="./htmlimg/tx2.png";//鼠标悬浮时的旋转图标
-	}
-	function mouseOut()
-	{
-		document.getElementById('mainimg').src ="./htmlimg/tx.png"//默认的旋转图标
-	}
-</script>
-</div>
-<footer id="top_footer">
-<span id="top_copyright">
-<hr class="top_hr_style02">
-　　　　　　 　　(°ˊДˋ°)つ友情链接：
-</span>
+<footer>Accelerated & hosted by 4EVERLAND
+	I am participating in 4EVERLAND  First Landing event. Deploying projects to win your share of 50 million 4EVER, come and join here: <a href="https://hosting.4everland.org/#/?invite=TG17KCR4">https://hosting.4everland.org/#/?invite=TG17KCR4</a>
 </footer>
-</body>
-
-<script src="./javascript/snow.js"></script>
-<script>
-createSnow('', 60);
-</script>
-</html>
