@@ -1,0 +1,6 @@
+pipeline:
+  echo:
+    image: alpine
+    commands:
+      - echo deploying
+
